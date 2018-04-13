@@ -1,3 +1,6 @@
+//This is a project in processing js which builds a house and scenery.
+
+
 noStroke();
 //variable declaration
 var x = 56 , y = 182 , length = 137 ;
