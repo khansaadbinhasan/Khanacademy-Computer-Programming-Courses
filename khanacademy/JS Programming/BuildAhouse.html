@@ -90,14 +90,14 @@
 
 		//birds
 		noFill();
-		arc(x+length/2,y-length,length,length,335,360);
-		arc(x+length*1.5,y-length,length,length,180,207);
+		arc(x+length/2,y-length,length,length,radians(335),radians(360));
+		arc(x+length*1.5,y-length,length,length,radians(180),radians(207));
 
-		arc(x+length*1.5,y-length,length,length,335,360);
-		arc(x+length*2.5,y-length,length,length,180,207);
+		arc(x+length*1.5,y-length,length,length,radians(335),radians(360));
+		arc(x+length*2.5,y-length,length,length,radians(180),radians(207));
 
-		arc(x+length,y-length/1.5,length,length,335,360);
-		arc(x+length*2,y-length/1.5,length,length,180,207);
+		arc(x+length,y-length/1.5,length,length,radians(335),radians(360));
+		arc(x+length*2,y-length/1.5,length,length,radians(180),radians(207));
 
 
 		//grass
@@ -106,8 +106,8 @@
 		{
 		    for(var k=-30;k<360;k+=30)
 		    {
-		    arc(x-length/2+k,y+length*1.1+l,length,length,335,357);
-		    arc(x+length/2+k,y+length*1.1+l,length,length,180,206);
+			    arc(x-length/2+k,y+length*1.1+l,length,length,radians(335),radians(357));
+			    arc(x+length/2+k,y+length*1.1+l,length,length,radians(180),radians(206));
 		    }
 
 		}

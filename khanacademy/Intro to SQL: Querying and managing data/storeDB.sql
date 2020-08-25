@@ -1,0 +1,20 @@
+CREATE TABLE STORE (id INTEGER PRIMARY KEY , item TEXT , price REAL , quantity INTEGER,aisle INTEGER);
+INSERT INTO STORE VALUES ( 1 , "chips" , 5 , 1000 , 2); 
+INSERT INTO STORE VALUES ( 2 , "bananas" , 1 , 500 , 7); 
+INSERT INTO STORE VALUES ( 3 , "apples" , 1 , 300 , 7); 
+INSERT INTO STORE VALUES ( 4 , "chicken" , 100 , 5 , 1); 
+INSERT INTO STORE VALUES ( 5 , "chocolates" , 250 , 5 , 2);
+INSERT INTO STORE VALUES ( 6 , "biscuits n cookies" , 50 , 2 , 2);
+INSERT INTO STORE VALUES ( 7 , "oranges" ,3 , 150 , 7 );
+INSERT INTO STORE VALUES ( 8 , "radish" ,1 , 50 , 9 );
+INSERT INTO STORE VALUES ( 9 , "potatoes" ,0.5 , 150 , 9 );
+INSERT INTO STORE VALUES ( 10 , "okra" , 0.2 , 50 , 9);
+INSERT INTO STORE VALUES ( 11 , "fish" , 3 , 100 , 1 );
+INSERT INTO STORE VALUES ( 12 , "mutton" , 5 , 120 , 1);
+INSERT INTO STORE VALUES ( 13 , "crab" ,7 , 60 , 1 );
+INSERT INTO STORE VALUES ( 14 , "mangoes" ,3 , 450 , 7 );
+INSERT INTO STORE VALUES ( 15 , "brinjal" , 2 , 100 , 9);
+
+SELECT * FROM STORE; 
+SELECT item , price FROM STORE ORDER BY price ;
+SELECT max(price) FROM STORE;
