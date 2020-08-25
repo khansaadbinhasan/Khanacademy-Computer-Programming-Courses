@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html> 
+ <head>
+    <title>Magic 8-Ball</title> 
+</head>
+ <body>
+    <p align="center"> 
+    <!--This draws the Canvas on the webpage -->
+      <canvas id="mycanvas"></canvas> 
+    </p>
+ </body>
+ 
+ <!-- Run all the JavaScript stuff -->
+ <!-- Include the processing.js library -->
+ <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+ <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+ 
+ <script>
+
+    var sketchProc = function(processingInstance) 
+    {
+
+        with (processingInstance) 
+        {
+            size(400, 400); 
+            frameRate(30);
+
+            background(255, 251, 0);
+
+			fill(random(0,55),random(0,55),random(0,55));
+			ellipse(200,200,300,300);
+
+			fill(random(100,155),random(100,155),random(100,155));
+			triangle(198,50,74,280,329,280);
+
+
+			fill(255,255,255);
+			ellipse(200,134,94,17);
+			noFill();
+			strokeWeight(2);
+			// arc(200,-34,300,349,75,105);
+			// arc(200,301,300,350,255,287);
+			fill(0, 0, 0);
+			ellipse(200,133,12,12);
+
+			fill(random(200,255),random(200,255),random(200,255));
+			textSize(20);
+
+			var ans=floor(random(1,5));
+
+			if(ans===1)
+			{
+			    text("something bad\nis gonna happen\nto you",133,186);
+			}
+
+			else if(ans===2)
+			{
+			    text("today your\ntrue identity\nshall be revealed",139,176);
+			}
+
+			else if(ans===3)
+			{
+			    text("you never\nknew but you\nwere a potato\nall along",149,176);
+			}
+
+			else if(ans===4)
+			{
+			    text("this world is\nan inception\nand your life is\njust a lie",149,176);
+			}
+
+			else
+			{
+			    text("darth vader\nis your father",149,196);
+			}
+
+
+			fill(0,0,0);
+			image(getImage("avatars/piceratops-ultimate"),329,320,77,82);
+			text("made by\nKringata",268,373);
+        };
+
+    };
+
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas"); 
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
+
+</html>
+
+
+
+
+
+
+

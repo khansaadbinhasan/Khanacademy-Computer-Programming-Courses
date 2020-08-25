@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html> 
+	<head>
+		<title>Whast For Dinner</title> 
+	</head>
+	
+	<body>
+		<p align="center"> 
+		<!--This draws the Canvas on the webpage -->
+		  <canvas id="mycanvas"></canvas> 
+		</p>
+	</body>
+ 
+	<!-- Run all the JavaScript stuff -->
+	<!-- Include the processing.js library -->
+	<!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+	<script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+ 
+	<script>
+		var sketchProc = function(processingInstance) {
+		 with (processingInstance) {
+			size(400, 400); 
+	        // frameRate(30);
+
+		    // plate
+			fill(145, 76, 76);
+			ellipse(200, 200, 350, 350);
+			ellipse(200, 200, 300, 300);
+
+
+			//food
+			//lchicken
+			noStroke();
+			fill(237, 128, 128);
+			ellipse(240,160,75,90);//round part
+			fill(247, 247, 247);
+			ellipse(297,300,15,15);//lower bone
+			ellipse(300,295,15,15);//lower bone
+			stroke(255, 240, 255);
+			strokeWeight(12);
+			line(250,200,300,300);//bone
+
+			//rchicken
+			noStroke();
+			fill(237, 128, 128);
+			ellipse(270,140,75,90);//round part
+			fill(247, 247, 247);
+			ellipse(311,275,15,15);//lower bone
+			ellipse(314,271,15,15);//lower bone
+			stroke(255, 240, 255);
+			strokeWeight(12);
+			line(286,184,313,274);//bone
+
+			//lemon
+			noStroke();
+			fill(242, 231, 27);
+			ellipse(159,114,63,63);
+
+			//onion
+			fill(252, 252, 252);
+			strokeWeight(1);
+			stroke(13, 12, 13);
+			ellipse(196,263,100,100);
+			ellipse(161,237,100,100);
+			ellipse(186,244,86,83);
+			ellipse(191,289,88,91);
+			ellipse(130,269,92,92);
+			ellipse(161,237,100,100);
+			ellipse(162,238,85,85);
+			ellipse(172,247,73,71);
+			ellipse(176,253,60,51);
+		}};
+
+		// Get the canvas that Processing-js will use
+		var canvas = document.getElementById("mycanvas"); 
+		// Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+		var processingInstance = new Processing(canvas, sketchProc); 
+	</script>
+
+</html>

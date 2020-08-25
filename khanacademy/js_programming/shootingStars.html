@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html> 
+ <head>
+    <title>Shooting Star</title> 
+</head>
+ <body>
+    <p align="center"> 
+    <!--This draws the Canvas on the webpage -->
+      <canvas id="mycanvas" width="3000" height="3000"></canvas> 
+    </p>
+ </body>
+ 
+ <!-- Run all the JavaScript stuff -->
+ <!-- Include the processing.js library -->
+ <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+ <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+ 
+ <script>
+    var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+        size(400, 400); 
+        frameRate(30);
+
+        var xPos = 50;
+        var yPos = 50;
+        var x = 350;
+        var y = 180;
+
+
+
+        draw = function() {
+            background(35, 40, 74);
+            noStroke();
+            fill(247, 239, 239);
+            ellipse(33,108,10,10);
+            ellipse(268,86,10,10);
+            ellipse(98,184,10,10);
+            ellipse(64,267,10,10);
+            ellipse(318,310,10,10);
+            ellipse(225,54,10,10);
+             ellipse(335,185,10,10);
+            ellipse(154,92,10,10);
+            ellipse(162,330,10,10);
+            ellipse(156,242,10,10);
+            ellipse(362,345,10,10);
+            ellipse(343,68,10,10);
+            
+            fill(255, 255, 255);
+            ellipse(xPos, yPos, 34, 28);
+            
+            stroke(242, 12, 12);
+            strokeWeight(4);
+            line(xPos-35,yPos-12,xPos-14,yPos+6);
+            line(xPos-16,yPos-34,xPos+8,yPos-13);
+            line(xPos-40,yPos-34,xPos-11,yPos-8);
+            stroke(146, 247, 57);
+            line(xPos-35,yPos-42,xPos,yPos-10);
+            line(xPos-42,yPos-27,xPos-14,yPos-3);
+            
+            
+            
+            
+            noStroke();
+            fill(255, 255, 255);
+            ellipse(x, y, 20, 20);
+              
+            x -= 0.40 ;
+            y -= 0.35 ;
+            
+            xPos += 1 ;
+            yPos += 0.95 ;
+            
+
+        };
+
+    }};
+
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas"); 
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
+
+</html>
+
+
+

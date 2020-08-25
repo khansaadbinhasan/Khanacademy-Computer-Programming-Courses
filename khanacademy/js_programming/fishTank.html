@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html> 
+ <head>
+    <title>Fish Tank</title> 
+</head>
+ <body>
+    <p align="center"> 
+    <!--This draws the Canvas on the webpage -->
+      <canvas id="mycanvas"></canvas> 
+    </p>
+ </body>
+ 
+ <!-- Run all the JavaScript stuff -->
+ <!-- Include the processing.js library -->
+ <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+ <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+ 
+ <script>
+
+    var sketchProc = function(processingInstance) 
+    {
+
+
+        with (processingInstance) 
+        {
+            size(400, 400); 
+            frameRate(30);
+
+            //makes the water
+            background(84, 121, 255);
+              
+            //draws fish of a given size at a given position
+            var makeFish=function(size,xPos,yPos)
+            {
+                noStroke();
+                //for making fins
+                fill(random(0,200),random(0,220),random(0,150));
+                triangle(xPos,yPos,xPos-size,yPos-size,xPos-size,yPos+size);
+               
+                //for making the body of fishes
+                fill(random(0,200),random(0,220),random(0,150));
+                ellipse(xPos+size*1.5,yPos,size*3.3,size);
+               
+                //making eyes of the fishes
+                stroke(0, 0, 0);
+                strokeWeight(size/4);
+                   point(xPos+size*2.5,yPos);
+                   
+                noStroke();
+                //making mouth
+                fill(255, 0, 0);
+                rect(xPos+size*2.8,yPos,size*3/9,size/9);
+                
+            };
+
+            //making fishes of different sizes
+            var fishSize=44;
+            makeFish(fishSize,66,76);
+            makeFish(fishSize-20,310,64);
+            makeFish(fishSize+20,137,258);
+            makeFish(fishSize+10,224,162);
+
+            //prints name and picture of author:)
+            image(getImage("avatars/robot_male_3"),360,327,40,70);
+            textSize(17);
+            fill(0, 0, 0);
+            text("made by\nkringata",296,370);
+
+
+    
+        };
+
+    };
+
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas"); 
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
+
+</html>
+
+
+
+
+

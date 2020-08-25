@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html> 
+ <head>
+    <title>Ad Design</title> 
+</head>
+ <body>
+    <p align="center"> 
+    <!--This draws the Canvas on the webpage -->
+      <canvas id="mycanvas" width="3000" height="3000"></canvas> 
+    </p>
+ </body>
+ 
+ <!-- Run all the JavaScript stuff -->
+ <!-- Include the processing.js library -->
+ <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+ <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+ 
+ <script>
+
+    var sketchProc = function(processingInstance) 
+    {
+
+
+        with (processingInstance) 
+        {
+            size(400, 400); 
+            frameRate(30);
+
+            var pos=50;
+            background(0, 0, 0);
+            
+            fill(207, 54, 54);
+            ellipse(200,200,200,200);
+            
+            fill(255, 97, 97);
+            ellipse(207,147,25,25);
+            ellipse(194,257,25,25);
+            ellipse(144,187,25,25);
+            ellipse(244,225,25,25);
+            
+            fill(255, 255, 255);
+            textSize(20);
+            
+            text("TICKET TO MARS!!!", 10, 30);
+            textSize(10);
+            
+            text("-> BORED OF THIS PLANET?", 10, pos);
+            text("-> WANNA TRY A NEW ONE", 10, pos+12);
+            text("-> HOW ABOUT OUR RED NEIGHBOUR", 10, pos+24);
+            text("   BENEFITS:\n->HIGH CHANCE OF MEETING INTELLIGENT BEINGS\n   (not talking about humans)",10,pos+50);
+            text("->A BLANK CANVAS FOR YOUR CREATIVITY",10,pos+88);
+            text("->UNLIMITED PEACE",10,pos+100);
+            text("->SEVERAL RECORDS CREATED",10,pos+112);
+            text("->HELPING SCIENCE",10,pos+124);
+            text("    BENEFITS OF OUR SERVICE",10,pos+156);
+            text("->FLY LOW COST IF YOU ARE READY TO DIE",10,pos+168);
+            text("->NO PREVIOUS EXPERIENCE NEEDED",10,pos+180);
+            text("->TAKES ONLY A YEAR TO REACH MARS",10,pos+192);
+            text("->READY TO GO WITHIN A MONTH OF TICKET BOOKING",10,pos+204);
+            text("->CATERS TO SINGLE CUSTOMERS ALSO",10,pos+216);
+
+    
+        };
+
+    };
+
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas"); 
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
+
+</html>
+
+
+
+
+
